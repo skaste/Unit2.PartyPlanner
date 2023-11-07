@@ -5,6 +5,13 @@
 //user observes their party added to the list of event
 
 const getAllEvents = async () => {
-  console.log(getAllEvents);
+  const response = await fetch(`https://fsa-crud-2aa9294fe819.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/events`);
+  const eventSchedule = await response.json();
+  const eventListiing = eventSchedule.results;
+  renderAllEvents(eventListing);
   
 };
+
+const renderAllEvents = (listOfEvents) => {
+  
+}
